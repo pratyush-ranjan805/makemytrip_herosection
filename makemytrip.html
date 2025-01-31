@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyTrip Hero Section</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #003580;
+            padding: 10px 20px;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        .hero-section {
+            background-image: url('https://via.placeholder.com/1500x600'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .search-bar {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar input, .search-bar select {
+            padding: 12px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            padding: 12px 24px;
+            background-color: #ffcc00;
+            color: #003580;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #e6b800;
+        }
+
+        .special-fares {
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .special-fares a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .special-fares a:hover {
+            color: #ffcc00;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .navbar .nav-links {
+                margin-top: 10px;
+            }
+
+            .hero-section h1 {
+                font-size: 36px;
+            }
+
+            .search-bar {
+                padding: 20px;
+            }
+
+            .search-bar input, .search-bar select {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .search-bar button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">MakeMyTrip</div>
+        <div class="nav-links">
+            <a href="#">Flights</a>
+            <a href="#">Hotels</a>
+            <a href="#">Homestays</a>
+            <a href="#">Holiday Packages</a>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <h1>Book Flights, Hotels, and Holiday Packages</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="From">
+            <input type="text" placeholder="To">
+            <input type="date" placeholder="Departure">
+            <input type="date" placeholder="Return">
+            <select>
+                <option>1 Adult</option>
+                <option>2 Adults</option>
+                <option>3 Adults</option>
+            </select>
+            <button>Search</button>
+        </div>
+        <div class="special-fares">
+            <a href="#">Special Fares</a>
+            <a href="#">Student Fares</a>
+            <a href="#">Senior Citizen Fares</a>
+        </div>
+    </div>
+</body>
+</html>
